@@ -1,0 +1,82 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block 'styles' %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock%}
+
+{% block 'content' %}
+
+    <div class="section-home">
+
+        <div class="dashboard-around">
+            <img class="image-around" src="{% static 'assets/img/toro_dashboard.png' %}" alt="toro_dashboard"/>
+            <a href="{% url 'upload_page' %}">
+                <button class="db-boton boton-home">
+                    <i class="bi bi-download"></i>
+                    <span>Descargar Datos</span>
+                </button>
+            </a>
+        </div>
+
+        <div class="dashboard-principal">
+            <div class="db-title">
+                <h2>Precios Promedios</h2>
+            </div>
+            <div class="db-container">
+                <div class="db-item">
+                    <div class="db-image">
+                        <img class="image-1kg" src="{% static 'assets/img/pote_dashboard.png' %}" alt="">
+                    </div>
+                    <div class="db-description">
+                        <div class="db-quantity">
+                            <h3 class="db-text">1 Kg</h3>
+                        </div>
+                        <div class="db-price">
+                            <h3 class="db-text">$1800</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="db-item">
+                    <div class="db-image">
+                        <img class="image-1-2kg" src="{% static 'assets/img/pote_dashboard.png' %}" alt="">
+                    </div>
+                    <div class="db-description">
+                        <div class="db-quantity">
+                            <h3 class="db-text">1/2 Kg</h3>
+                        </div>
+                        <div class="db-price">
+                            <h3 class="db-text">$900</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="db-item">
+                    <div class="db-image">
+                        <img class="image-1-4kg" src="{% static 'assets/img/pote_dashboard.png' %}" alt="">
+                    </div>
+                    <div class="db-description">
+                        <div class="db-quantity">
+                            <h3 class="db-text">1/4 Kg</h3>
+                        </div>
+                        <div class="db-price">
+                            <h3 class="db-text">$400</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-around">
+            <img class="image-around" src="{% static 'assets/img/paleta_dashboard.png' %}" alt="toro_dashboard" style="padding: 10px;"/>
+            <a href="{% url 'upload_page' %}">
+                <button class="db-boton boton-home">
+                    <i class="bi bi-arrow-clockwise"></i>
+                    <span>Actualizar Datos</span>
+                </button>
+            </a>
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block 'content' %}
+<div class="section-home">
+    <div class="home-around home-around-left">
+        <p class="text-left">"Esta web fue creada para obtener datos <br>comerciales de las heladerías de Hurlingham"</p>
+    </div>
+
+    <div class="home-toro">
+        <img class="home-toro-img" src="{% static 'assets/img/toro_home.png' %}" alt="toro_home"/>
+    </div>
+    
+    <div class="home-around">
+        <a href="{% url 'dashboard' %}">
+            <button class="boton-home">
+                <i class="bi bi-graph-up-arrow"></i>
+                <span>Ver Estadísticas</span>
+            </button>
+        </a>
+    </div>
+</div>
+{% endblock %}
